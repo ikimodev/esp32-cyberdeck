@@ -1,5 +1,7 @@
 # ESP32 Cyberdeck
 
+[![نتيجة البناء والاختبارات](https://github.com/ikimodev/esp32-cyberdeck/actions/workflows/check.yml/badge.svg)](https://github.com/ikimodev/esp32-cyberdeck/actions/workflows/check.yml)
+
 **جهاز OLED صغير لفحص شبكات Wi-Fi وإشاراتها، بأربعة أزرار وصفحة محلية للرسم من الجوال.**
 
 [English](README.md) · [التوصيلات](docs/HARDWARE.md) · [البناء والرفع](docs/BUILD.md) · [نتائج التحقق](docs/VALIDATION.md)

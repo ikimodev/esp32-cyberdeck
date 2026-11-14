@@ -1,6 +1,6 @@
 # Publish to GitHub
 
-This project is prepared for `ikimodev/esp32-cyberdeck`. It has not been published merely because this file exists.
+Published project: [ikimodev/esp32-cyberdeck](https://github.com/ikimodev/esp32-cyberdeck). The steps below are for publishing a separate copy or fork; use your own owner/name for a new repository.
 
 1. On GitHub, create a new **public** repository named **esp32-cyberdeck**, owned by **ikimodev**.
 2. Leave README, .gitignore and license initialization disabled: this folder already contains them.

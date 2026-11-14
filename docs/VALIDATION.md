@@ -15,6 +15,8 @@ Public-repository preparation: **2026-11-14**. Firmware baseline: **4.2.4-HW2**.
 
 ## Repository preparation checks, 2026-11-14
 
+**GitHub Actions also passed:** [Build and test #1](https://github.com/ikimodev/esp32-cyberdeck/actions/runs/43535178856) completed successfully for firmware/source commit `2255b965e9f8059a16bb49605ac4067428452da8`. Both jobs passed: the software build/tests and C++ assertions, and the ESP32 firmware compile with the pinned core. This is a cloud compile/software result, not a hardware execution result.
+
 `npm run build` succeeded from the portable repository. `npm test` passed all 8 preview groups, all 18 phone UI groups, the breadboard graph checks, and the repository audit (44 text files / 50 local documentation links at the initial check). The regenerated complete firmware matched the previously compiled HW2 baseline; only trailing whitespace at the end of the generated file was removed for Git hygiene. The media builder produced a 22-second GIF and the overview PNG. This preparation did not flash or simulate ESP32 hardware.
 
 The public builder regenerates the production sketch from the supplied structured source and shared assets. Repository preparation checks the generated result against the delivered baseline. New tests should report their own results rather than reusing the old build numbers for modified code.

@@ -1,5 +1,7 @@
 # ESP32 Cyberdeck
 
+[![Build and test](https://github.com/ikimodev/esp32-cyberdeck/actions/workflows/check.yml/badge.svg)](https://github.com/ikimodev/esp32-cyberdeck/actions/workflows/check.yml)
+
 **A pocket OLED cyberdeck with real 2.4GHz Wi-Fi diagnostics, four buttons and a local phone drawing interface.**
 
 [العربية](README.ar.md) · [Hardware & wiring](docs/HARDWARE.md) · [Build & upload](docs/BUILD.md) · [Validation](docs/VALIDATION.md) · [Contributing](CONTRIBUTING.md)
