@@ -1,0 +1,55 @@
+<div id="cyberdeck-power-preview" lang="ar" dir="rtl">
+<style>
+#cyberdeck-power-preview{--deck-bg:#090d13;--deck-panel:#111923;--deck-text:#edf2f6;--deck-muted:#a9b7c4;--deck-edge:#384b5b;--deck-yellow:#ffd637;--deck-blue:#2bbeff;font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--deck-text);width:100%;max-width:760px;margin:0 auto;color-scheme:dark}
+#cyberdeck-power-preview *{box-sizing:border-box}
+#cyberdeck-power-preview .deck-stage{padding:24px;background:var(--deck-bg);border:1px solid var(--deck-edge);clip-path:polygon(12px 0,100% 0,100% calc(100% - 12px),calc(100% - 12px) 100%,0 100%,0 12px)}
+#cyberdeck-power-preview .deck-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:18px}
+#cyberdeck-power-preview .deck-brand{font-size:clamp(18px,4vw,24px);letter-spacing:.07em;font-weight:600;margin:0;direction:ltr}
+#cyberdeck-power-preview .deck-caption{font-size:12px;color:var(--deck-muted);margin:5px 0 0;direction:ltr;text-align:right}
+#cyberdeck-power-preview .deck-demo{font-size:11px;letter-spacing:.07em;border:1px solid var(--deck-edge);padding:3px 7px;color:var(--deck-yellow);white-space:nowrap;direction:ltr}
+#cyberdeck-power-preview .deck-display{position:relative;padding:12px;background:#020405;border:1px solid var(--deck-edge)}
+#cyberdeck-power-preview .deck-display::before,#cyberdeck-power-preview .deck-display::after{content:"";position:absolute;top:12px;bottom:12px;width:2px;background:linear-gradient(to bottom,var(--deck-yellow) 0 25%,var(--deck-blue) 25% 100%)}
+#cyberdeck-power-preview .deck-display::before{right:5px}#cyberdeck-power-preview .deck-display::after{left:5px}
+#cyberdeck-power-preview canvas{display:block;width:100%;height:auto;aspect-ratio:2;background:#000;image-rendering:pixelated;image-rendering:crisp-edges;direction:ltr}
+#cyberdeck-power-preview .deck-console{display:grid;grid-template-columns:64px minmax(0,1fr) 64px;grid-template-areas:"left screen right";gap:10px;direction:ltr}
+#cyberdeck-power-preview .deck-console .deck-display{grid-area:screen;min-width:0}
+#cyberdeck-power-preview .deck-key-side{display:flex;flex-direction:column;justify-content:space-between;gap:8px}
+#cyberdeck-power-preview .deck-key-left{grid-area:left}#cyberdeck-power-preview .deck-key-right{grid-area:right}
+#cyberdeck-power-preview .deck-key{appearance:none;min-height:56px;min-width:0;background:var(--deck-panel);color:var(--deck-text);border:1px solid var(--deck-edge);border-bottom:3px solid var(--deck-edge);font:500 15px/1.3 system-ui;border-radius:5px;padding:7px 4px;cursor:pointer;touch-action:manipulation}
+#cyberdeck-power-preview .deck-key small{display:block;color:var(--deck-muted);font-size:11px;margin-top:3px}
+#cyberdeck-power-preview .deck-key:active,#cyberdeck-power-preview .deck-key.pressed{border-color:var(--deck-yellow);color:var(--deck-yellow);background:#273037}
+#cyberdeck-power-preview button:focus-visible,#cyberdeck-power-preview summary:focus-visible{outline:2px solid var(--deck-blue);outline-offset:3px}
+#cyberdeck-power-preview .deck-status{min-height:52px;margin:16px 0 0;color:var(--deck-muted);font-size:14px}
+#cyberdeck-power-preview .deck-bottom{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:10px}
+#cyberdeck-power-preview .deck-spec{font-size:11px;color:var(--deck-muted);direction:ltr}
+#cyberdeck-power-preview .deck-reboot{background:transparent;color:var(--deck-muted);border:1px solid var(--deck-edge);border-radius:4px;min-height:44px;padding:7px 12px;font:inherit;font-size:13px;cursor:pointer}
+#cyberdeck-power-preview details{margin-top:18px;border-top:1px solid var(--deck-edge);padding-top:12px;color:var(--deck-muted);font-size:14px}
+#cyberdeck-power-preview summary{cursor:pointer;color:var(--deck-text);min-height:36px}
+#cyberdeck-power-preview .deck-help{margin-top:10px;display:grid;gap:9px}
+#cyberdeck-power-preview .deck-help p{margin:0}
+#cyberdeck-power-preview .deck-help b{font-weight:600;color:var(--deck-yellow)}
+#cyberdeck-power-preview .deck-sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:430px){#cyberdeck-power-preview .deck-stage{padding:14px 10px}#cyberdeck-power-preview .deck-top{flex-wrap:wrap;margin-bottom:12px}#cyberdeck-power-preview .deck-brand{font-size:18px}#cyberdeck-power-preview .deck-console{grid-template-columns:44px minmax(0,1fr) 44px;gap:6px}#cyberdeck-power-preview .deck-key-side{gap:6px}#cyberdeck-power-preview .deck-key{font-size:12px;min-height:44px;padding:6px 1px;white-space:nowrap}#cyberdeck-power-preview .deck-key small{display:none}#cyberdeck-power-preview .deck-display{padding:6px}#cyberdeck-power-preview .deck-display::before,#cyberdeck-power-preview .deck-display::after{top:6px;bottom:6px;width:1px}#cyberdeck-power-preview .deck-display::before{right:2px}#cyberdeck-power-preview .deck-display::after{left:2px}#cyberdeck-power-preview .deck-bottom{align-items:flex-start}#cyberdeck-power-preview .deck-spec{max-width:145px}}
+#cyberdeck-power-preview button:disabled{opacity:.35;cursor:default}#cyberdeck-power-preview .deck-reboot{color:var(--deck-yellow);border-color:var(--deck-yellow);min-width:115px}</style>
+<section class="deck-stage" aria-label="معاينة التشغيل والإطفاء لشاشة Cyberdeck">
+<div class="deck-top"><div><h2 class="deck-brand">CYBERDECK // POWER</h2><p class="deck-caption">SSD1306 / POWER-ON STUDY</p></div><span class="deck-demo">PREVIEW · DEMO DATA</span></div>
+<div class="deck-console" role="group" aria-label="الشاشة وأزرار الجهاز الأربعة الجانبية">
+<div class="deck-key-side deck-key-left">
+<button class="deck-key" type="button" data-key="enter" aria-label="دخول">دخول<small>ENTER</small></button>
+<button class="deck-key" type="button" data-key="back" aria-label="رجوع">رجوع<small>ESC</small></button>
+</div>
+<div class="deck-display"><canvas id="deck-oled-v42" width="128" height="64" role="img" aria-label="شاشة OLED تجريبية 128 في 64">شاشة المعاينة؛ استخدم الأزرار الأربعة على جانبيها.</canvas></div>
+<div class="deck-key-side deck-key-right">
+<button class="deck-key" type="button" data-key="up" aria-label="أعلى">↑ أعلى<small>UP</small></button>
+<button class="deck-key" type="button" data-key="down" aria-label="أسفل">↓ أسفل<small>DOWN</small></button>
+</div>
+</div>
+<p class="deck-status" id="deck-status-v42" role="status" aria-live="polite">الجهاز مطفأ</p>
+<div class="deck-bottom"><button class="deck-reboot" id="deck-reboot-v42" type="button">تشغيل الجهاز</button><span class="deck-spec">128 × 64 · 1 BIT<br>YELLOW y0–15 / BLUE y16–63</span></div>
+
+<div class="deck-sr" id="deck-reader-v42"></div>
+</section>
+<script>
+/*__CYBERDECK_CODE__*/
+</script>
+</div>

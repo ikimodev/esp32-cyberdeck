@@ -1,0 +1,43 @@
+name: Build and test
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  software:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - run: npm run build
+      - run: npm test
+      - name: Evaluate C++ power/debounce assertions
+        run: g++ -std=c++17 -fsyntax-only tests/power_compile_tests.cpp
+  firmware:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - uses: arduino/setup-arduino-cli@v2
+        with:
+          version: '1.5.1'
+      - run: npm run build:firmware
+      - name: Install the validated ESP32 core
+        run: |
+          arduino-cli core update-index --additional-urls https://espressif.github.io/arduino-esp32/package_esp32_index.json
+          arduino-cli core install esp32:esp32@3.3.12 --additional-urls https://espressif.github.io/arduino-esp32/package_esp32_index.json
+      - run: arduino-cli compile --fqbn esp32:esp32:esp32 --jobs 4 --output-dir build firmware/Cyberdeck_Hardware

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="680" viewBox="0 0 1280 680" role="img" aria-labelledby="title description">
+<title id="title">ESP32 Cyberdeck — connection overview</title><desc id="description">ESP32 outside the breadboard; SSD1306 in the center; ENTER and BACK on the left; UP and DOWN on the right. GPIO21 SDA, GPIO22 SCL, GPIO12 ENTER, GPIO27 BACK, GPIO14 UP, GPIO13 DOWN. Supply 3.3 volts and common ground.</desc>
+<defs><pattern id="holes" width="15" height="18" patternUnits="userSpaceOnUse"><circle cx="7" cy="9" r="2.2" fill="#8c999e"/></pattern></defs>
+<rect width="1280" height="680" rx="16" fill="#090d13"/>
+<g font-family="Arial, sans-serif" fill="#edf2f6"><text x="44" y="50" font-size="27" font-weight="bold">CYBERDECK // CONNECTION OVERVIEW</text><text x="44" y="80" font-size="16" fill="#a9b7c4">Classic ESP32 · SSD1306 128×64 · four GPIO-to-GND switches · separate controller</text></g>
+<rect x="46" y="180" width="230" height="325" rx="15" fill="#18232b" stroke="#52616b" stroke-width="2"/>
+<rect x="80" y="211" width="142" height="122" rx="5" fill="#aeb6b4"/>
+<path d="M98 221h18v18h18v-18h18v18h18v-18h18" stroke="#53635c" fill="none" stroke-width="5"/>
+<g font-family="Arial, sans-serif" text-anchor="middle" fill="#edf2f6"><text x="160" y="286" font-size="21" fill="#202d29">ESP32</text><text x="160" y="310" font-size="14" fill="#202d29">WROOM-32D</text><text x="160" y="378" font-size="18">4MB / DEV MODULE</text><text x="160" y="409" font-size="15" fill="#a9b7c4">USB power + data</text></g>
+<rect x="124" y="475" width="73" height="42" rx="5" fill="#afb9bf"/>
+<rect x="406" y="177" width="826" height="353" rx="12" fill="#dce1db"/>
+<rect x="430" y="219" width="778" height="129" fill="url(#holes)"/><rect x="430" y="371" width="778" height="128" fill="url(#holes)"/>
+<path d="M430 198h778M430 512h778" stroke="#cd4f4f" stroke-width="3"/><path d="M430 207h778M430 520h778" stroke="#4d8bc2" stroke-width="3"/>
+<rect x="420" y="352" width="795" height="11" rx="4" fill="#acb8af"/>
+<g fill="#374957" stroke="#79909a"><rect x="604" y="259" width="48" height="48" rx="5"/><rect x="604" y="409" width="48" height="48" rx="5"/><rect x="1090" y="259" width="48" height="48" rx="5"/><rect x="1090" y="409" width="48" height="48" rx="5"/></g>
+<g fill="#161d22" stroke="#b1c1c5" stroke-width="3"><circle cx="628" cy="283" r="15"/><circle cx="628" cy="433" r="15"/><circle cx="1114" cy="283" r="15"/><circle cx="1114" cy="433" r="15"/></g>
+<g font-family="Arial, sans-serif" font-size="16" fill="#182530" font-weight="bold" text-anchor="middle"><text x="628" y="246">ENTER · 12</text><text x="628" y="487">BACK · 27</text><text x="1114" y="246">UP · 14</text><text x="1114" y="487">DOWN · 13</text></g>
+<rect x="775" y="254" width="211" height="171" rx="7" fill="#173747" stroke="#80a1ac" stroke-width="2"/><rect x="793" y="278" width="176" height="99" fill="#000"/>
+<path d="M800 307h161" stroke="#ffd637" stroke-width="2"/>
+<g font-family="monospace" fill="#ffd637" font-size="13"><text x="801" y="297">CYBERDECK</text><text x="801" y="328" fill="#2bbeff">SSD1306</text><text x="801" y="350" fill="#2bbeff">128 x 64</text></g>
+<g fill="#d6bc73"><circle cx="825" cy="414" r="4"/><circle cx="858" cy="414" r="4"/><circle cx="891" cy="414" r="4"/><circle cx="924" cy="414" r="4"/></g>
+<g font-family="Arial, sans-serif" text-anchor="middle" font-size="11" fill="#edf2f6"><text x="825" y="400">GND</text><text x="858" y="400">VCC</text><text x="891" y="400">SCL</text><text x="924" y="400">SDA</text></g>
+<path d="M276 220H320V125H462V228M276 246H335V137H477V228M276 272H350V149H492V228M276 298H365V161H507V228" stroke-width="3" fill="none" stroke="#2bbeff"/>
+<g fill="#162b35"><circle cx="462" cy="228" r="5"/><circle cx="477" cy="228" r="5"/><circle cx="492" cy="228" r="5"/><circle cx="507" cy="228" r="5"/></g>
+<g font-family="Arial, sans-serif" fill="#edf2f6" font-size="14"><text x="600" y="572">Remote jumper bundle enters at a1–a8</text><text x="600" y="600" fill="#a9b7c4">Flat local links keep plug heads away from button caps.</text></g>
+<g font-family="monospace" font-size="16" fill="#edf2f6"><text x="45" y="572">a1 GND   a2 3V3   a3 SDA21   a4 SCL22</text><text x="45" y="600">a5 ENTER12   a6 BACK27   a7 UP14   a8 DOWN13</text></g>
+<text x="45" y="642" font-family="Arial, sans-serif" font-size="15" fill="#a9b7c4">Illustration only: use wokwi/diagram.json for every breadboard hole and connection. Each button closes to common GND.</text>
+</svg>

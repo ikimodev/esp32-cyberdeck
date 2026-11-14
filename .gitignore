@@ -1,0 +1,17 @@
+node_modules/
+build/
+firmware/**/build/
+qa/
+.cache/
+*.bin
+*.elf
+*.o
+*.d
+*.log
+*.zip
+.env
+.env.*
+!.env.example
+arduino-cli.local.yaml
+.DS_Store
+Thumbs.db

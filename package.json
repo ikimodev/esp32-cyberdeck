@@ -1,0 +1,20 @@
+{
+  "name": "esp32-cyberdeck",
+  "version": "4.2.4",
+  "private": true,
+  "description": "ESP32 OLED cyberdeck with real Wi-Fi scanning, a phone drawing UI and a standalone code-matrix game",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build:preview": "node preview/power/build.mjs",
+    "build:firmware": "node tools/build-firmware.mjs",
+    "build": "npm run build:preview && npm run build:firmware",
+    "test:preview": "node --test preview/power/tests.test.mjs",
+    "test:web": "node tests/web.test.mjs",
+    "test:wiring": "node wokwi/validate.mjs",
+    "test": "npm run test:preview && npm run test:web && npm run test:wiring && node tools/check-repo.mjs",
+    "media": "node tools/render-media.mjs"
+  }
+}

@@ -1,0 +1,444 @@
+{
+  "version": 1,
+  "author": "Cyberdeck: remote jumper inputs, lower button access",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-breadboard",
+      "id": "bb1",
+      "top": 121.8,
+      "left": -112.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": 135,
+      "left": -340,
+      "attrs": {}
+    },
+    {
+      "type": "board-ssd1306",
+      "id": "oled",
+      "top": 185.54,
+      "left": 134.63,
+      "attrs": {
+        "i2cAddress": "0x3c"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton-6mm",
+      "id": "enter",
+      "top": 183.4,
+      "left": 23.2,
+      "rotate": 90,
+      "attrs": {
+        "color": "yellow",
+        "key": "Enter"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton-6mm",
+      "id": "back",
+      "top": 250.6,
+      "left": 23.2,
+      "rotate": 90,
+      "attrs": {
+        "color": "red",
+        "key": "Escape"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton-6mm",
+      "id": "up",
+      "top": 183.4,
+      "left": 340,
+      "rotate": 90,
+      "attrs": {
+        "color": "green",
+        "key": "ArrowUp"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton-6mm",
+      "id": "down",
+      "top": 250.6,
+      "left": 340,
+      "rotate": 90,
+      "attrs": {
+        "color": "blue",
+        "key": "ArrowDown"
+      }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "left_controls",
+      "top": 45,
+      "left": 0,
+      "attrs": {
+        "text": "ENTER / BACK"
+      }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "right_controls",
+      "top": 45,
+      "left": 320,
+      "attrs": {
+        "text": "UP / DOWN"
+      }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "connector_label",
+      "top": 100,
+      "left": -115,
+      "attrs": {
+        "text": "1 2 3 4 5 6 7 8"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "back:1.l",
+      "bb1:15b.g",
+      "",
+      []
+    ],
+    [
+      "back:2.l",
+      "bb1:13b.g",
+      "",
+      []
+    ],
+    [
+      "back:1.r",
+      "bb1:15b.j",
+      "",
+      []
+    ],
+    [
+      "back:2.r",
+      "bb1:13b.j",
+      "",
+      []
+    ],
+    [
+      "up:1.l",
+      "bb1:48t.b",
+      "",
+      []
+    ],
+    [
+      "up:2.l",
+      "bb1:46t.b",
+      "",
+      []
+    ],
+    [
+      "up:1.r",
+      "bb1:48t.e",
+      "",
+      []
+    ],
+    [
+      "up:2.r",
+      "bb1:46t.e",
+      "",
+      []
+    ],
+    [
+      "enter:1.l",
+      "bb1:15t.b",
+      "",
+      []
+    ],
+    [
+      "enter:2.l",
+      "bb1:13t.b",
+      "",
+      []
+    ],
+    [
+      "enter:1.r",
+      "bb1:15t.e",
+      "",
+      []
+    ],
+    [
+      "enter:2.r",
+      "bb1:13t.e",
+      "",
+      []
+    ],
+    [
+      "down:1.l",
+      "bb1:48b.g",
+      "",
+      []
+    ],
+    [
+      "down:2.l",
+      "bb1:46b.g",
+      "",
+      []
+    ],
+    [
+      "down:1.r",
+      "bb1:48b.j",
+      "",
+      []
+    ],
+    [
+      "down:2.r",
+      "bb1:46b.j",
+      "",
+      []
+    ],
+    [
+      "oled:GND",
+      "bb1:28t.c",
+      "",
+      []
+    ],
+    [
+      "oled:VCC",
+      "bb1:29t.c",
+      "",
+      []
+    ],
+    [
+      "oled:SCL",
+      "bb1:30t.c",
+      "",
+      []
+    ],
+    [
+      "oled:SDA",
+      "bb1:31t.c",
+      "",
+      []
+    ],
+    [
+      "esp:TX0",
+      "$serialMonitor:RX",
+      "",
+      []
+    ],
+    [
+      "esp:RX0",
+      "$serialMonitor:TX",
+      "",
+      []
+    ],
+    [
+      "bb1:13t.a",
+      "bb1:5t.e",
+      "yellow",
+      [
+        "v-40",
+        "h-76.8"
+      ]
+    ],
+    [
+      "bb1:13b.f",
+      "bb1:6t.e",
+      "orange",
+      [
+        "v-6",
+        "h-67.2"
+      ]
+    ],
+    [
+      "bb1:48t.a",
+      "bb1:7t.e",
+      "green",
+      [
+        "v-85",
+        "h-393.6"
+      ]
+    ],
+    [
+      "bb1:48b.f",
+      "bb1:8t.e",
+      "blue",
+      [
+        "h200",
+        "v-140",
+        "h-584"
+      ]
+    ],
+    [
+      "bb1:15t.a",
+      "bb1:tn.11",
+      "black",
+      []
+    ],
+    [
+      "bb1:15b.f",
+      "bb1:1t.e",
+      "black",
+      [
+        "v-12",
+        "h-134.4"
+      ]
+    ],
+    [
+      "bb1:46t.a",
+      "bb1:tn.37",
+      "black",
+      []
+    ],
+    [
+      "bb1:46b.f",
+      "bb1:tn.50",
+      "black",
+      [
+        "v-12",
+        "h220",
+        "v-90"
+      ]
+    ],
+    [
+      "bb1:tn.25",
+      "bb1:tn.26",
+      "black",
+      []
+    ],
+    [
+      "bb1:tp.25",
+      "bb1:tp.26",
+      "red",
+      []
+    ],
+    [
+      "bb1:1t.d",
+      "bb1:tn.1",
+      "black",
+      []
+    ],
+    [
+      "bb1:2t.e",
+      "bb1:tp.1",
+      "red",
+      [
+        "h-9.6"
+      ]
+    ],
+    [
+      "bb1:28t.a",
+      "bb1:tn.22",
+      "black",
+      []
+    ],
+    [
+      "bb1:29t.a",
+      "bb1:tp.23",
+      "red",
+      []
+    ],
+    [
+      "bb1:30t.a",
+      "bb1:4t.e",
+      "cyan",
+      [
+        "v-45",
+        "h-249.6"
+      ]
+    ],
+    [
+      "bb1:31t.a",
+      "bb1:3t.e",
+      "purple",
+      [
+        "v-55",
+        "h-268.8"
+      ]
+    ],
+    [
+      "bb1:1t.a",
+      "esp:GND.2",
+      "black",
+      [
+        "v-110",
+        "*",
+        "h20"
+      ]
+    ],
+    [
+      "bb1:2t.a",
+      "esp:3V3",
+      "red",
+      [
+        "v-100",
+        "*",
+        "h30"
+      ]
+    ],
+    [
+      "bb1:3t.a",
+      "esp:D21",
+      "purple",
+      [
+        "v-90",
+        "*",
+        "h40"
+      ]
+    ],
+    [
+      "bb1:4t.a",
+      "esp:D22",
+      "cyan",
+      [
+        "v-80",
+        "*",
+        "h50"
+      ]
+    ],
+    [
+      "bb1:5t.a",
+      "esp:D12",
+      "yellow",
+      [
+        "v-120",
+        "h-340",
+        "*",
+        "h-25"
+      ]
+    ],
+    [
+      "bb1:6t.a",
+      "esp:D27",
+      "orange",
+      [
+        "v-130",
+        "h-360",
+        "*",
+        "h-35"
+      ]
+    ],
+    [
+      "bb1:7t.a",
+      "esp:D14",
+      "green",
+      [
+        "v-140",
+        "h-380",
+        "*",
+        "h-45"
+      ]
+    ],
+    [
+      "bb1:8t.a",
+      "esp:D13",
+      "blue",
+      [
+        "v-150",
+        "h-400",
+        "*",
+        "h-55"
+      ]
+    ]
+  ],
+  "dependencies": {}
+}

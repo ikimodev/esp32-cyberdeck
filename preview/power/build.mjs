@@ -1,0 +1,11 @@
+import {readFile,writeFile} from 'node:fs/promises';
+const here=new URL('./',import.meta.url);
+const files=['../base/assets.mjs','../base/core.mjs','../base/renderer.mjs','power-model.mjs','power-renderer.mjs','runtime.js'];
+const sources=await Promise.all(files.map(file=>readFile(new URL(file,here),'utf8')));
+const code="(()=>{\n'use strict';\n"+sources.map(source=>source.replace(/^import .+;\r?\n/gm,'').replace(/^export /gm,'')).join('\n')+'\n})();';
+new Function(code);if(code.includes('</script>'))throw Error('Unsafe inline terminator');
+const fragment=(await readFile(new URL('fragment.template.html',here),'utf8')).replace('/*__CYBERDECK_CODE__*/',code);
+await writeFile(new URL('power-preview.fragment.html',here),fragment);
+await writeFile(new URL('power-preview.html',here),'<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cyberdeck — Power Preview</title><style>body{margin:0;padding:20px 8px;background:#090d13}</style></head><body>'+fragment+'</body></html>');
+if(process.argv[2])await writeFile(process.argv[2],fragment);
+console.log('Built interactive power preview: '+Buffer.byteLength(fragment)+' bytes');
